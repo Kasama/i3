@@ -213,6 +213,8 @@ assign [class="Firefox"] → $ws1
 assign [class="Telegram"] → $ws4
 # Spotify
 assign [class="spotify"] → $ws10
+# Steam
+assign [class="steam"] → $ws9
 # }
 
 # Autostart {
