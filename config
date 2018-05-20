@@ -186,7 +186,7 @@ bindsym $mod+r exec "albert show"
 bindsym $mod+F8 exec "toggle-touchpad"
 
 # Lock the screen
-bindsym $mod+p exec "i3lock -p win -i ~/images/randomWindowsScreenshot.png -f -e -c 555555"
+bindsym $mod+p exec "i3lock-next"
 
 # Swap ESC and Caps Lock
 bindsym $mod+F10 xmodmap ~/.speedswapper
