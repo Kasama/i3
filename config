@@ -225,7 +225,7 @@ exec xfce4-power-manager
 exec nm-applet
 exec volumeicon -d pulse
 exec albert
-exec redshift
+# exec redshift
 exec owncloud
 exec dunst
 # }
