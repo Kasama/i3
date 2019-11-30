@@ -218,7 +218,7 @@ assign [class="steam"] → $ws9
 # }
 
 # Autostart {
-exec /usr/bin/compton --config ~/.config/i3/compton.conf
+exec /usr/bin/picom --config ~/.config/i3/picom.conf
 exec sh ~/.fehbg
 exec polybar --reload top
 exec xfce4-power-manager
