@@ -76,6 +76,9 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# make window sticky
+bindsym $mod+Ctrl+s sticky toggle
 # }
 
 # Focus settings {
@@ -196,6 +199,10 @@ bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioNext exec "playerctl next"
 bindsym XF86AudioPrev exec "playerctl previous"
 
+# Screenshot Control
+bindsym Print --release exec "scrot --line style=solid,width=1,color='gray' -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+
 # }
 
 # I3 Bar {
@@ -218,7 +225,7 @@ assign [class="steam"] → $ws9
 # }
 
 # Autostart {
-exec /usr/bin/picom --config ~/.config/i3/picom.conf
+exec --no-startup-id /usr/bin/picom --config ~/.config/i3/picom.conf -b
 exec sh ~/.fehbg
 exec polybar --reload top
 exec xfce4-power-manager
