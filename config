@@ -135,6 +135,8 @@ mode "resize" {
 # Window settings {
 # no borders
 new_window 1pixel
+
+for_window [window_role="PictureInPicture"] border pixel 1 sticky enable
 # }
 
 # Workspace names {
@@ -195,9 +197,9 @@ bindsym $mod+p exec "i3lock-next"
 bindsym $mod+F10 xmodmap ~/.speedswapper
 
 # Music Control
-bindsym XF86AudioPlay exec "playerctl play-pause"
-bindsym XF86AudioNext exec "playerctl next"
-bindsym XF86AudioPrev exec "playerctl previous"
+bindsym XF86AudioPlay exec "~/.config/polybar/music-player.sh play-pause"
+bindsym XF86AudioNext exec "~/.config/polybar/music-player.sh next"
+bindsym XF86AudioPrev exec "~/.config/polybar/music-player.sh previous"
 
 # Screenshot Control
 bindsym Print --release exec "scrot --line style=solid,width=1,color='gray' -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
@@ -232,6 +234,8 @@ exec xfce4-power-manager
 exec nm-applet
 exec volumeicon -d pulse
 exec albert
+# exec uim-toolbar-gtk-systray
+exec nagastart.sh
 # exec redshift
 exec owncloud
 exec dunst
