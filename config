@@ -205,6 +205,23 @@ bindsym XF86AudioPrev exec "~/.config/polybar/music-player.sh previous"
 bindsym Print --release exec "scrot --line style=solid,width=1,color='gray' -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 
+# Extra keys (G600 Mouse)
+bindsym --release F13 scratchpad show
+bindsym --release F14 exec "~/.local/bin/pausePiP.sh"
+bindsym --release F15 exec "true"
+
+bindsym --release F16 exec "true" # G8
+bindsym --release F17 exec "true" # G7
+bindsym --release F18 exec "~/.local/bin/muteZoom.sh"
+
+bindsym --release F19 exec "~/.config/polybar/mic-control-toggle.sh"
+bindsym --release F20 exec "~/.config/polybar/mic-control-toggle.sh"
+bindsym --release F21 exec "~/.config/polybar/mic-control-toggle.sh"
+
+bindsym --release F22 exec "~/.config/polybar/mic-control-toggle.sh"
+bindsym --release F23 exec "~/.config/polybar/mic-control-toggle.sh"
+bindsym --release F24 exec "~/.config/polybar/mic-control-toggle.sh"
+
 # }
 
 # I3 Bar {
