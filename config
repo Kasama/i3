@@ -214,9 +214,9 @@ bindsym --release F16 exec "true" # G8
 bindsym --release F17 exec "true" # G7
 bindsym --release F18 exec "~/.local/bin/muteZoom.sh"
 
-bindsym --release F19 exec "~/.config/polybar/mic-control-toggle.sh"
-bindsym --release F20 exec "~/.config/polybar/mic-control-toggle.sh"
-bindsym --release F21 exec "~/.config/polybar/mic-control-toggle.sh"
+bindsym --release F19 exec "~/.config/polybar/music-player.sh previous"
+bindsym --release F20 exec "~/.config/polybar/music-player.sh play-pause"
+bindsym --release F21 exec "~/.config/polybar/music-player.sh next"
 
 bindsym --release F22 exec "~/.config/polybar/mic-control-toggle.sh"
 bindsym --release F23 exec "~/.config/polybar/mic-control-toggle.sh"
