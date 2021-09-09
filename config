@@ -136,7 +136,7 @@ mode "resize" {
 # no borders
 new_window 1pixel
 
-for_window [window_role="PictureInPicture"] border pixel 1 sticky enable
+for_window [title="Picture-in-Picture"] border pixel 1 sticky enable
 # }
 
 # Workspace names {
