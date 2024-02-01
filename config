@@ -224,6 +224,8 @@ bindsym --release F22 exec "~/.config/polybar/mic-control-toggle.sh"
 bindsym --release F23 exec "~/.config/polybar/mic-control-toggle.sh"
 bindsym --release F24 exec "~/.config/polybar/mic-control-toggle.sh"
 
+bindsym --release XF86TouchpadOff exec "~/.config/polybar/mic-control-toggle.sh"
+
 # }
 
 # I3 Bar {
