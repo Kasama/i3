@@ -203,6 +203,10 @@ bindsym XF86AudioPlay exec "~/.config/polybar/music-player.sh play-pause"
 bindsym XF86AudioNext exec "~/.config/polybar/music-player.sh next"
 bindsym XF86AudioPrev exec "~/.config/polybar/music-player.sh previous"
 
+# Mic control
+bindsym XF86AudioMicMute exec "~/.config/polybar/mic-control-toggle.sh"
+bindsym Pause exec "~/.config/polybar/mic-control-toggle.sh"
+
 # Screenshot Control
 bindsym Print --release exec "scrot --line style=solid,width=1,color='gray' -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 bindsym Shift+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
@@ -248,6 +252,7 @@ assign [class="steam"] → $ws9
 # }
 
 # Autostart {
+exec xset r rate 200 35
 exec --no-startup-id /usr/bin/picom --config ~/.config/i3/picom.conf -b
 exec sh ~/.fehbg
 exec polybar --reload top
@@ -255,6 +260,7 @@ exec xfce4-power-manager
 exec nm-applet
 exec volumeicon -d pulse
 exec albert
+exec syndaemon -i .5 -K -t -R -d # disable touchpad while typing for .5s
 # exec uim-toolbar-gtk-systray
 exec nagastart.sh
 # exec redshift
