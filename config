@@ -144,11 +144,11 @@ for_window [class="zoom" title="zoom"] floating enable
 # Workspace names {
 set $ws1 1: 
 set $ws2 2: 
-set $ws3 3: /b/
+set $ws3 3: 
 set $ws4 4: 
-set $ws5 5: 5
+set $ws5 5: /b/
 set $ws6 6: 6
-set $ws7 7: 7
+set $ws7 7: u
 set $ws8 8: 8
 set $ws9 9: 
 set $ws10 10: 
@@ -186,8 +186,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Open a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# Open Albert Launcher
-# bindsym $mod+r exec "albert show"
+# Open Rofi Launcher
+bindsym $mod+r exec "rofi -show combi"
 
 # Toggle touchpad
 bindsym $mod+F8 exec "toggle-touchpad"
@@ -247,6 +247,8 @@ assign [class="Firefox"] → $ws1
 assign [class="Telegram"] → $ws4
 # Spotify
 assign [class="spotify"] → $ws10
+assign [class="feishin"] → $ws10
+assign [class="psst"] → $ws10
 # Steam
 assign [class="steam"] → $ws9
 # }
@@ -259,10 +261,10 @@ exec polybar --reload top
 exec xfce4-power-manager
 exec nm-applet
 exec volumeicon -d pulse
-exec albert
+# exec albert
 exec syndaemon -i .5 -K -t -R -d # disable touchpad while typing for .5s
 # exec uim-toolbar-gtk-systray
-exec nagastart.sh
+# exec nagastart.sh
 # exec redshift
 exec owncloud
 exec dunst
