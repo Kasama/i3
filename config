@@ -261,11 +261,11 @@ exec polybar --reload top
 exec xfce4-power-manager
 exec nm-applet
 exec volumeicon -d pulse
-# exec albert
+exec keepassxc --minimized
 exec syndaemon -i .5 -K -t -R -d # disable touchpad while typing for .5s
+exec dunst
 # exec uim-toolbar-gtk-systray
 # exec nagastart.sh
 # exec redshift
-exec owncloud
-exec dunst
+exec bash -c 'sleep 5s && owncloud'
 # }
