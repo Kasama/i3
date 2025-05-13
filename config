@@ -61,7 +61,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+c split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -188,6 +188,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # Open Rofi Launcher
 bindsym $mod+r exec "rofi -show combi"
+bindsym $mod+v exec "clipmenu -p clipboard"
 
 # Toggle touchpad
 bindsym $mod+F8 exec "toggle-touchpad"
