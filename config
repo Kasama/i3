@@ -148,7 +148,7 @@ set $ws3 3: 
 set $ws4 4: 
 set $ws5 5: /b/
 set $ws6 6: 6
-set $ws7 7: u
+set $ws7 7: 7
 set $ws8 8: 8
 set $ws9 9: 
 set $ws10 10: 
@@ -246,6 +246,7 @@ bindsym --release XF86TouchpadOff exec "~/.config/polybar/mic-control-toggle.sh"
 assign [class="Firefox"] → $ws1
 # Telegram
 assign [class="Telegram"] → $ws4
+assign [class="Discord"] → $ws4
 # Spotify
 assign [class="spotify"] → $ws10
 assign [class="feishin"] → $ws10
@@ -265,6 +266,7 @@ exec volumeicon -d pulse
 exec keepassxc --minimized
 exec syndaemon -i .5 -K -t -R -d # disable touchpad while typing for .5s
 exec dunst
+exec ~/scripts/xsession.target.start.sh
 # exec uim-toolbar-gtk-systray
 # exec nagastart.sh
 # exec redshift
